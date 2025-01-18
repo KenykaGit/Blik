@@ -1,0 +1,66 @@
+{
+  "users": [
+    {
+      "_id": "ObjectId('user_id_1')",
+      "username": "john_doe",
+      "email": "john@example.com",
+      "passwordHash": "hashed_password",
+      "profilePicture": "url_to_profile_picture",
+      "bio": "Short bio about the user",
+      "createdAt": "2023-01-01T00:00:00Z",
+      "updatedAt": "2023-01-01T00:00:00Z"
+    }
+  ],
+  "pins": [
+    {
+      "_id": "ObjectId('pin_id_1')",
+      "userId": "ObjectId('user_id_1')",
+      "boardId": "ObjectId('board_id_1')",
+      "imageUrl": "url_to_image",
+      "description": "Description of the pin",
+      "createdAt": "2023-01-01T00:00:00Z",
+      "updatedAt": "2023-01-01T00:00:00Z",
+      "tags": ["tag1", "tag2"],
+      "comments": [
+        {
+          "userId": "ObjectId('user_id_2')",
+          "comment": "This is a comment",
+          "createdAt": "2023-01-02T00:00:00Z"
+        }
+      ]
+    }
+  ],
+  "boards": [
+    {
+      "_id": "ObjectId('board_id_1')",
+      "userId": "ObjectId('user_id_1')",
+      "title": "Board Title",
+      "description": "Description of the board",
+      "createdAt": "2023-01-01T00:00:00Z",
+      "updatedAt": "2023-01-01T00:00:00Z",
+      "pins": [
+        "ObjectId('pin_id_1')",
+        "ObjectId('pin_id_2')"
+      ]
+    }
+  ],
+  "comments": [
+    {
+      "_id": "ObjectId('comment_id_1')",
+      "pinId": "ObjectId('pin_id_1')",
+      "userId": "ObjectId('user_id_2')",
+      "comment": "This is a comment",
+      "createdAt": "2023-01-02T00:00:00Z"
+    }
+  ],
+  "followers": [
+    {
+      "_id": "ObjectId('follower_id_1')",
+      "userId": "ObjectId('user_id_1')",
+      "followers": [
+        "ObjectId('user_id_2')",
+        "ObjectId('user_id_3')"
+      ]
+    }
+  ]
+}
